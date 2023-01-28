@@ -208,10 +208,14 @@
 
 					
 					<article class="artist-artwork">
-						<a href="./louis-bernard-st-jean.html">
-							<img src="./svg/Want4.jpg" alt="">
-							<h3 class="no-top-margin" style="text-align:center;margin-top:1em;">WE SEE WHAT WE WANT</h3>
-						</a>
+						<img src="./svg/Want4.jpg" alt="">
+							
+							<div style="display: flex;">
+								<img id="play" src="./svg/play.svg" alt="play" style="width: 40px; padding-right: 10px;" class="play">
+								<img id="pause" src="./svg/pause.svg" alt="pause" style="width: 40px; padding-right: 10px;" class="pause">
+								<h3 id="play" class="no-top-margin" style="text-align:center;margin-top:1em;">WE SEE WHAT WE WANT</h3>
+								
+							</div>
 					</article>
 
 					
@@ -296,6 +300,17 @@
 				}
 			}
 		}
+		let play = document.getElementById('play');
+		let pause = document.getElementById('pause');
+		let audio = new Audio('./oeuvres/we_see.mp3');
+		function playAudio() {
+			audio.play();
+		}
+		function pauseAudio() {
+			audio.pause();
+		}
+		pause.addEventListener('click', pauseAudio);
+		play.addEventListener('click', playAudio);
 	</script>
 </body>
 
